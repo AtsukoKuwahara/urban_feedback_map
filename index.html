@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Leaflet Web Map</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-panel">
+        <form id="location-form">
+          <input
+            type="text"
+            id="location-input"
+            placeholder="Enter a location"
+          />
+          <button type="submit">Go</button>
+        </form>
+        <div id="map"></div>
+        <div id="coords"></div>
+        <button
+          id="save"
+          style="float: right; margin-right: 20px; margin-top: 10px"
+        >
+          Save Map Data
+        </button>
+      </div>
+      <div class="sidebar">
+        <div id="search-form">
+          <input type="text" id="search" placeholder="Search descriptions..." />
+          <button id="searchBtn">Search</button>
+        </div>
+        <div id="textForm" style="display: none">
+          <textarea
+            id="featureText"
+            rows="4"
+            cols="50"
+            placeholder="Enter description here..."
+          ></textarea>
+          <div style="display: flex; justify-content: space-between">
+            <button onclick="saveFeatureText()">Save Text</button>
+            <button onclick="closeTextForm()">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/scripts/main.js"></script>
+  </body>
+</html>

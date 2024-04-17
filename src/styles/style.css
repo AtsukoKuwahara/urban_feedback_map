@@ -1,0 +1,119 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif; /* Standard font for clean look */
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.left-panel {
+  background-color: #f4f4f4f4;
+  width: 75%; /* Adjusted to take up the left side */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 10px;
+  border-right: 2px solid lightgray;
+}
+
+#location-form {
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  margin: 10px; /* Space below the form */
+}
+
+#map {
+  width: 100%;
+  height: 500px; /* Sufficient height for interaction */
+}
+
+#coords {
+  width: auto; /* Same width as the map */
+  padding: 10px 20px;
+  color: #333;
+  background-color: #f4f4f4;
+  border-radius: 4px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.sidebar {
+  width: 25%;
+  height: auto; /* Adjusted to possibly extend further down for more content */
+  overflow: auto;
+  background: #f4f4f4;
+  border-left: 1px solid #ccc;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+#search-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px; /* Space below the form */
+}
+
+#textForm {
+  width: 100%; /* Full width of the sidebar */
+  display: none; /* Hidden by default, shown when needed */
+  flex-direction: column; /* Stack elements vertically */
+  padding: 10px; /* Padding for internal spacing */
+}
+#featureText {
+  width: 100%; /* Full width minus padding */
+  padding: 8px; /* Padding for the textarea */
+  border: 1px solid #ccc; /* Subtle border */
+  border-radius: 4px; /* Rounded corners */
+  resize: none; /* Disable resizing to maintain layout integrity */
+  margin-bottom: 10px; /* Space between textarea and buttons */
+}
+
+#textForm > div {
+  display: flex;
+  justify-content: space-between; /* Space between buttons */
+}
+
+#location-form input[type="text"],
+#search-form input[type="text"] {
+  flex-grow: 1; /* Take available space */
+  padding: 8px; /* Consistent padding */
+  border-radius: 4px; /* Rounded corners for aesthetics */
+  border: 1px solid #ccc; /* Subtle border styling */
+  margin-right: 10px; /* Space between the input and the button */
+}
+
+button {
+  padding: 10px 20px; /* Adequate padding for touch targets */
+  background-color: #4caf50; /* Themed background color */
+  color: white; /* Contrast text color for readability */
+  border: none; /* Simplify styling by removing border */
+  border-radius: 4px; /* Match input styling */
+  cursor: pointer; /* Pointer to indicate interactivity */
+  font-size: 16px; /* Legible font size */
+}
+
+button:last-child {
+  margin-right: 0; /* No margin on the right for the last button */
+}
+
+button:hover {
+  background-color: #45a049;
+}
