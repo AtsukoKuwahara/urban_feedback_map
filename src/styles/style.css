@@ -1,119 +1,154 @@
-/* Basic reset */
+/* Basic reset to eliminate default padding and margins across all elements, ensuring consistency */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
 }
 
+/* Global body styles setting up typography and alignment */
 body {
-  font-family: Arial, sans-serif; /* Standard font for clean look */
-  line-height: 1.6;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 10px;
+  font-family: Arial, sans-serif; /* Clean and widely supported typeface */
+  line-height: 1.6; /* Increases readability of text */
+  display: flex; /* Flex container for center alignment of child elements */
+  flex-direction: column; /* Stacks child elements vertically */
+  align-items: center; /* Centers children horizontally */
+  margin: 10px; /* Provides some spacing around the entire content */
 }
 
+/* Container for both the map and sidebar, using flexbox to layout child elements horizontally */
 .container {
   display: flex;
-  width: 100%;
-  justify-content: center;
+  width: 100%; /* Full width of the viewport */
+  justify-content: center; /* Centers children within the horizontal space */
 }
 
+/* Styling for the left panel containing the map and related controls */
 .left-panel {
-  background-color: #f4f4f4f4;
-  width: 75%; /* Adjusted to take up the left side */
+  background-color: #f4f4f4; /* Light grey background for subtle contrast */
+  width: 75%; /* Takes up 75% of the container's width */
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-right: 10px;
-  border-right: 2px solid lightgray;
+  flex-direction: column; /* Organizes children elements (form, map, coords) vertically */
+  align-items: center; /* Centers the map and form horizontally */
+  padding-right: 10px; /* Adds spacing inside the right edge */
+  border-right: 2px solid lightgray; /* Separates the left panel from the sidebar visually */
 }
 
+/* Styles for the location form at the top of the left panel */
 #location-form {
-  width: 100%;
-  display: flex;
-  justify-content: left;
-  margin: 10px; /* Space below the form */
+  width: 100%; /* Ensures the form stretches across the entire width of the left panel */
+  display: flex; /* Flex layout to place input and button inline */
+  justify-content: left; /* Aligns children to the start of the flex container */
+  margin: 10px; /* Spacing below the form */
 }
 
+/* Styles for the map element */
 #map {
-  width: 100%;
-  height: 500px; /* Sufficient height for interaction */
+  width: 100%; /* Full width of its parent to maximize display area */
+  height: 500px; /* Fixed height for map visibility */
 }
 
+/* Styling for displaying coordinates below the map */
 #coords {
-  width: auto; /* Same width as the map */
-  padding: 10px 20px;
-  color: #333;
-  background-color: #f4f4f4;
-  border-radius: 4px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  text-align: center;
+  width: auto; /* Width managed by content size and padding */
+  padding: 10px 20px; /* Ample padding for visual spacing */
+  color: #333; /* Dark grey text for readability */
+  background-color: #f4f4f4; /* Matches the panel background */
+  border-radius: 4px; /* Rounded corners for aesthetic appeal */
+  margin-top: 10px; /* Separates from map */
+  margin-bottom: 10px; /* Separates from save button */
+  text-align: center; /* Centers the coordinates text */
 }
 
+/* Styles for the sidebar which contains search and text input functionalities */
 .sidebar {
-  width: 25%;
-  height: auto; /* Adjusted to possibly extend further down for more content */
-  overflow: auto;
-  background: #f4f4f4;
-  border-left: 1px solid #ccc;
-  padding: 10px;
+  width: 25%; /* Occupies the remaining 25% of the container's width */
+  height: auto; /* Height managed by content */
+  overflow: auto; /* Allows scrolling if content exceeds height */
+  background: #f4f4f4; /* Light grey background for consistency */
+  border-left: 1px solid #ccc; /* Defines a clear boundary on the left */
+  padding: 10px; /* Internal spacing */
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Organizes children vertically */
 }
 
+/* Flexbox layout for search form ensuring the input and button are inline */
 #search-form {
-  width: 100%;
+  width: 100%; /* Full width of sidebar */
   display: flex;
-  justify-content: center;
+  justify-content: flex-end; /* Centering contents within the form */
   margin-bottom: 10px; /* Space below the form */
+  flex-wrap: wrap;
 }
 
+/* Style adjustments for the form within the sidebar for entering descriptions */
 #textForm {
-  width: 100%; /* Full width of the sidebar */
-  display: none; /* Hidden by default, shown when needed */
-  flex-direction: column; /* Stack elements vertically */
-  padding: 10px; /* Padding for internal spacing */
-}
-#featureText {
-  width: 100%; /* Full width minus padding */
-  padding: 8px; /* Padding for the textarea */
-  border: 1px solid #ccc; /* Subtle border */
-  border-radius: 4px; /* Rounded corners */
-  resize: none; /* Disable resizing to maintain layout integrity */
-  margin-bottom: 10px; /* Space between textarea and buttons */
+  width: 100%; /* Utilizes the full width of its parent, the sidebar */
+  display: none; /* Hidden by default and shown when needed */
+  flex-direction: column; /* Stacks its children (textarea and buttons) vertically */
+  padding: 10px; /* Padding around the inner content for spacing */
 }
 
+/* Styling for the textarea within the text form */
+#featureText {
+  width: 100%; /* Full width to match the form */
+  padding: 8px; /* Comfortable padding around the text */
+  border: 1px solid #ccc; /* Subtle border for definition */
+  border-radius: 4px; /* Rounded corners for consistency with other inputs */
+  resize: none; /* Disables resizing to maintain layout stability */
+}
+
+/* Horizontal layout for buttons with space between */
 #textForm > div {
   display: flex;
   justify-content: space-between; /* Space between buttons */
 }
 
+/* Styles for input fields in both the location and search forms */
 #location-form input[type="text"],
 #search-form input[type="text"] {
   flex-grow: 1; /* Take available space */
   padding: 8px; /* Consistent padding */
   border-radius: 4px; /* Rounded corners for aesthetics */
   border: 1px solid #ccc; /* Subtle border styling */
-  margin-right: 10px; /* Space between the input and the button */
 }
 
+/* General button styles, applied to all buttons within the application */
 button {
-  padding: 10px 20px; /* Adequate padding for touch targets */
-  background-color: #4caf50; /* Themed background color */
-  color: white; /* Contrast text color for readability */
-  border: none; /* Simplify styling by removing border */
-  border-radius: 4px; /* Match input styling */
-  cursor: pointer; /* Pointer to indicate interactivity */
-  font-size: 16px; /* Legible font size */
+  padding: 10px 20px; /* Padding for a larger, more clickable area */
+  background-color: #4caf50; /* Green background for a vibrant, noticeable appearance */
+  color: white; /* High contrast text color for readability */
+  border: none; /* No border for a cleaner look */
+  border-radius: 4px; /* Rounded edges for a modern appearance */
+  cursor: pointer; /* Cursor indicates clickable items */
+  font-size: 16px; /* Font size is large enough for easy reading */
 }
 
 button:last-child {
   margin-right: 0; /* No margin on the right for the last button */
 }
 
+/* Hover effect for buttons to indicate interactivity */
 button:hover {
   background-color: #45a049;
+}
+
+/* Adjust sidebar layout on smaller screens */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%; /* Make the sidebar full-width */
+    order: 1; /* Optionally move the sidebar above or below other content */
+    border-top: 2px solid lightgray;
+  }
+  .left-panel {
+    width: 100%; /* Ensures the left panel also takes full width */
+  }
+
+  .container {
+    flex-direction: column; /* Stack sidebar and main content vertically */
+  }
+
+  #search-form {
+    display: flex;
+    justify-content: flex-end;
+  }
 }
