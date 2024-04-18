@@ -103,8 +103,8 @@ Welcome to the LeafletWebMap! This quick guide will walk you through the basic f
 ### Saving Your Map Data
 - Click the "Save Map Data" button below the map to save all current features and their descriptions to your local storage.
 
-![Small Screen](src/assets/smallScreen.jpeg)  
-*Figure 6: Small Screen*
+![Small Screen](src/assets/small_screen.jpeg)  
+*Figure 6: Small Screen UI*
 
 ## Tips
 - Zoom in or out of the map for better precision while adding or editing features.
