@@ -24,7 +24,7 @@ LeafletWebMap is an interactive web mapping application developed using Leaflet.
    ```
 2. **Navigate to the project directory**
    ```bash
-   cd LeafletWebMap
+   cd leaflet_web_map
    ```
 3. **Open `index.html` in your browser**
    Simply double-click on `index.html` to open it in your default web browser, or drag and drop the file into the browser window.
@@ -103,8 +103,8 @@ Welcome to the LeafletWebMap! This quick guide will walk you through the basic f
 ### Saving Your Map Data
 - Click the "Save Map Data" button below the map to save all current features and their descriptions to your local storage.
 
-![Small Screen](src/assets/small_screen.jpeg)  
-*Figure 6: Small Screen UI*
+![Small Screen](src/assets/smallScreen.jpeg)  
+*Figure 6: Saving data locally - Small Screen UI*
 
 ## Tips
 - Zoom in or out of the map for better precision while adding or editing features.
