@@ -1,15 +1,14 @@
 # UrbanFeedbackMap
 
 ## Project Overview
-UrbanFeedbackMap is an extension of the LeafletWebMap project, adapted for urban planning and public feedback integration. This interactive web mapping application developed using Leaflet.js enables users to associate multiple features with text blocks and vice versa, enhancing community engagement and urban development feedback.
+UrbanFeedbackMap extends the LeafletWebMap for urban planning and public feedback integration. This interactive map allows multiple associations between geographical features and descriptive text blocks, enhancing user engagement in urban development.
 
 ## Features
-- **Enhanced Interaction**: Users can associate multiple geographical features with text descriptions and vice versa.
-- **Dynamic Map Viewing**: Supports panning and zooming within the map to explore urban areas.
-- **Advanced Feature Management**: Users can add, edit, or delete points, lines, or areas and associate them with descriptive text blocks.
-- **Robust Search Functionality**: Enhanced to search by names or descriptions and view results interactively.
-- **Local Storage**: Supports saving map data locally to ensure data persistence across sessions.
-- **Responsive Design**: Ensures usability on various devices by adapting to different screen sizes.
+- **Enhanced Interaction**: Associate multiple features with text blocks.
+- **Dynamic Viewing and Editing**: Pan, zoom, add, modify, or delete features.
+- **Robust Search**: Search features by name or description, with results displayed in the sidebar.
+- **Feature Color Coding**: Visual differentiation of features by type using color coding.
+- **Local Storage & Responsive Design**: Save data locally and access on any device.
 
 ## Technologies Used
 - **Leaflet.js**: A leading open-source JavaScript library for mobile-friendly interactive maps.
@@ -18,7 +17,7 @@ UrbanFeedbackMap is an extension of the LeafletWebMap project, adapted for urban
 ## Setup and Installation
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/yourusername/urban_feedback_map.git
+   git clone https://github.com/AtsukoKuwahara/urban_feedback_map.git
 
 2. **Navigate to the project directory**
    ```bash
@@ -72,31 +71,21 @@ Welcome to UrbanFeedbackMap! This quick guide will help you familiarize yourself
 *Figure 2: Adding a new feature to the map*
 
 ### Editing a Feature
-1. Use the search form to enter the description of the feature you are looking for.
-2. Click "Search" to display a list of matching features in the sidebar.
-3. Select the feature you want to edit from the list to automatically open the feature form with its details filled in.
-4. Modify the feature’s details in the form. You can change the name, type, coordinates (if applicable), and description.
-5. Click "Save" to apply the changes to the feature on the map.
-
-![Editing a Feature](src/assets/mapExampleEdit.jpeg)  
-*Figure 3: Editing an existing feature through the search function*
-
-### Editing a Feature Using the Leaflet Draw Tool
 1. Click the "Edit layers" button in the map's drawing controls to start editing features.
 2. Select the feature you want to edit directly on the map.
 3. Modify the feature's position or shape as needed.
 4. To update details like name, type, or description, ensure the feature is selected, then use the sidebar form to make changes and click "Save".
 
 ![Editing a Feature with Draw Tool](src/assets/mapExampleEditTool.jpeg)  
-*Figure 4: Editing a feature using the Leaflet draw tool*
+*Figure 3: Editing a feature using the Leaflet draw tool*
 
-### Deleting a Feature Using the Leaflet Draw Tool
+### Deleting a Feature
 1. Click the "Delete layers" button in the map's drawing controls to start deleting features.
 2. Select the feature you wish to delete.
 3. Press the save button in the drawing control toolbar or use the delete option that appears after selecting the feature.
 
 ![Deleting a Feature with Draw Tool](src/assets/mapExampleDeleteTool.jpeg)  
-*Figure 5: Deleting a feature using the Leaflet draw tool*
+*Figure 4: Deleting a feature using the Leaflet draw tool*
 
 These instructions ensure that users are aware of how to interact with the map features directly using Leaflet's built-in tools for a more dynamic experience. Including screenshots for each step helps visually guide the user through the process, making it easier to understand.
 
@@ -111,7 +100,7 @@ These instructions ensure that users are aware of how to interact with the map f
 If you search by name, the map will zoom directly to the feature that matches the name you've entered. This is useful for quickly locating a specific feature on the map.
 
 ![Searching for a Feature](src/assets/mapExampleSearch.jpeg)  
-*Figure 6: Using the search function to find features*
+*Figure 5: Using the search function to find features*
 
 This functionality enhances user interaction by allowing not only targeted searches but also providing an overview of all features when no specific query is entered. The sidebar effectively serves as a dynamic legend or directory of map content, which can be particularly useful in urban planning contexts where understanding the entire landscape is beneficial.
 
@@ -119,7 +108,7 @@ This functionality enhances user interaction by allowing not only targeted searc
 - Click the "Save Map Data" button below the map to save all current features and their details to your local storage.
 
 ![Saving Map Data](src/assets/saveMapData.jpeg)  
-*Figure 7: Saving map data locally*
+*Figure 6: Saving map data locally*
 
 ## Tips
 - Zoom in or out on the map for better precision while adding or editing features.
@@ -129,5 +118,3 @@ This functionality enhances user interaction by allowing not only targeted searc
 For assistance or more information, refer to the full documentation, or contact support via email at support@example.com.
 
 We hope you enjoy using UrbanFeedbackMap to engage with urban spaces and gather valuable community insights!
-
-
