@@ -91,12 +91,12 @@ These instructions ensure that users are aware of how to interact with the map f
 
 
 ### Searching for a Feature
-**By Description: **
+**By Description:**
 1. Simply enter a keyword into the search box located in the sidebar.
 2. Click "Search" to find and display matching features. If the search box is left blank, all features will be listed as results in the sidebar.
 3. Click on a feature's name in the results to highlight and zoom into the selected feature on the map and view or edit its details in the sidebar form.
 
-**By Name: **
+**By Name:**
 If you search by name, the map will zoom directly to the feature that matches the name you've entered. This is useful for quickly locating a specific feature on the map.
 
 ![Searching for a Feature](src/assets/mapExampleSearch.jpeg)  
