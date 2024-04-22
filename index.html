@@ -43,20 +43,59 @@
         </button>
       </div>
       <div class="sidebar">
-        <div id="search-form">
-          <input type="text" id="search" placeholder="Search descriptions..." />
-          <button id="searchBtn">Search</button>
+        <div id="search-form" class="search-form">
+          <input type="text" id="search" placeholder="Search features..." />
+          <div class="search-options">
+            <input
+              type="radio"
+              id="searchByName"
+              name="searchType"
+              value="name"
+              checked
+            />
+            <label for="searchByName">Name</label>
+            <input
+              type="radio"
+              id="searchByDescription"
+              name="searchType"
+              value="description"
+            />
+            <label for="searchByDescription">Description</label>
+          </div>
+          <div class="button-group">
+            <button id="searchBtn">Search</button>
+            <button id="clearBtn">Clear</button>
+          </div>
         </div>
-        <div id="textForm" style="display: none">
+        <div id="search-results" class="search-results"></div>
+        <div id="feature-form" style="display: none">
+          <label for="feature-name">Feature Name:</label>
+          <input type="text" id="feature-name" placeholder="Feature Name" />
+          <label for="feature-type">Feature Type:</label>
+          <select id="feature-type">
+            <option value="">Select Type</option>
+            <option value="Park">Park</option>
+            <option value="Playground">Playground</option>
+            <option value="Public Garden">Public Garden</option>
+            <option value="Other">Other</option>
+          </select>
+          <label for="feature-coordinates"
+            >Feature Coordinates (Click the map to change):</label
+          >
+          <input
+            type="text"
+            id="feature-coordinates"
+            placeholder="Coordinates"
+            readonly
+          />
+          <label for="feature-description">Description:</label>
           <textarea
-            id="featureText"
-            rows="4"
-            cols="50"
+            id="feature-description"
             placeholder="Enter description here..."
           ></textarea>
           <div style="display: flex; justify-content: space-between">
-            <button onclick="saveFeatureText()">Save Text</button>
-            <button onclick="closeTextForm()">Cancel</button>
+            <button onclick="saveFeatureDetails(selectedFeature)">Save</button>
+            <button onclick="closeFeatureForm()">Cancel</button>
           </div>
         </div>
       </div>
