@@ -114,7 +114,4 @@ This functionality enhances user interaction by allowing not only targeted searc
 - Zoom in or out on the map for better precision while adding or editing features.
 - Regularly save your data to ensure no progress is lost.
 
-## Need Help?
-For assistance or more information, refer to the full documentation, or contact support via email at support@example.com.
-
-We hope you enjoy using UrbanFeedbackMap to engage with urban spaces and gather valuable community insights!
+I hope you enjoy using UrbanFeedbackMap to engage with urban spaces and gather valuable community insights!
